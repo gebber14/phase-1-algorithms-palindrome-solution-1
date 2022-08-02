@@ -1,13 +1,29 @@
+function reverseString(word) {
+  // create an array from the input string
+  const wordArray = word.split("");
+  // reverse the array
+  const reversedWordArray = wordArray.reverse();
+  // create a string from the reversed array
+  const reversedWord = reversedWordArray.join("");
+  // return the reversed string
+  return reversedWord;
+}
+
 function isPalindrome(word) {
-  // Write your algorithm here
+  // reverse the input string
+  const reversedWord = reverseString(word);
+  // compare the reversed string to the input
+  return word === reversedWord;
 }
 
 /* 
   Add your pseudocode here
+  My solution previous was the same, though I didn't have the idea to conslidate the if statement at the end.
 */
 
 /*
   Add written explanation of your solution here
+  I did something similar in previous exercise!
 */
 
 // You can run `node index.js` to view these console logs
